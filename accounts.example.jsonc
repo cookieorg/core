@@ -1,0 +1,19 @@
+// Cookie Core accounts configuration file, you can add more sections with accounts to this
+// file as needed. Each section should be a JSON object with the following structure:
+[
+    {
+        "email": "", // email to the account
+        "password": "", // password to the account
+        "twostepcode": "", // if you have 2FA enabled on the account, provide the secret here (not the code)
+        "recoveryEmail": "", // recovery email for the account, used in case of suspicious
+        
+        // optional proxy configuration for the account, if you want to use a proxy for this account, fill in the details here
+        // if you don't want to use a proxy, you can leave this section out or set the url to an empty string
+        "proxy": {
+            "url": "",
+            "port": 0,
+            "username": "",
+            "password": ""
+        }
+    }
+]

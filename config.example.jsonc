@@ -1,0 +1,76 @@
+// Arquivo de configuração do Cookie Core
+// Customize apenas os campos que quer mudar
+// Todos os outros vêm com defaults do app.config.json bundled
+
+{
+    // Interfaceça do navegador
+    "headless": false,              // true = sem janela do navegador
+    
+    // Performance
+    "clusters": "auto",             // número de processos paralelos (auto = detecção automática)
+    "globalTimeout": "30sec",       // timeout global para operações
+    
+    // Workers: quais tarefas o bot deve executar
+    "workers": {
+        "doDailySet": true,         // Daily Set (tarefas diárias)
+        "doSpecialPromotions": true, // Promoções especiais
+        "doMorePromotions": true,    // Mais promoções
+        "doPunchCards": true,        // Punch Cards
+        "doAppPromotions": true,     // App Rewards
+        "doDesktopSearch": true,     // Pesquisas desktop
+        "doMobileSearch": true,      // Pesquisas mobile
+        "doDailyCheckIn": true,      // Check-in diário
+        "doReadToEarn": true         // Read to Earn
+    },
+    
+    // Configurações de búsca
+    "searchSettings": {
+        "scrollRandomResults": false,        // scroll aleátório nos resultados
+        "clickRandomResults": false,         // clique aleatório
+        "parallelSearching": true,           // pesquisas paralelas
+        "queryEngines": ["google", "wikipedia", "reddit"], // search engines
+        "searchResultVisitTime": "10sec",    // tempo para visitar resultado
+        
+        // Delays entre pesquisas
+        "searchDelay": {
+            "min": "30sec",                  // mínimo entre pesquisas
+            "max": "1min"                    // máximo entre pesquisas
+        },
+        
+        // Delays para ler artigos
+        "readDelay": {
+            "min": "30sec",
+            "max": "1min"
+        }
+    },
+    
+    // Auto-update
+    "autoUpdate": {
+        "enabled": false                     // verificar atualizações no startup
+    },
+    
+    // Ad-blocker
+    "adBlock": {
+        "enabled": true                      // bloquear anúncios
+    },
+    
+    // Proxy
+    "proxy": {
+        "queryEngine": false                 // usar proxy para queries
+    },
+    
+    // Notificações (webhooks)
+    "webhook": {
+        // Discord
+        "discord": {
+            "enabled": false,
+            "url": "https://discord.com/api/webhooks/..."  // seu webhook Discord
+        },
+        
+        // Ntfy.sh (notificações push simples)
+        "ntfy": {
+            "enabled": false,
+            "url": "https://ntfy.sh/seu_topico"
+        }
+    }
+}

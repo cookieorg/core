@@ -1,0 +1,39 @@
+# Build & Dependencies
+dist/
+node_modules/
+bun.lock
+
+# User Data (NEVER COMMIT)
+accounts.json
+accounts.dev.json
+config.json
+
+# Sessions & Caches
+sessions/
+.playwright-chromium-installed
+diagnostics/
+logs/
+
+# Development
+.dev/
+.vscode/
+.stfolder/
+.DS_Store
+note
+
+/diagnostics
+note
+accounts.dev.json
+accounts.main.json
+.DS_Store
+.playwright-chromium-installed
+bun.lock
+logs/
+.stfolder/
+.flags/
+
+# Cookie API client and production public keys
+
+./api/
+.env
+.*.env
